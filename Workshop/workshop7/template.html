@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My first template</title>
+  </head>
+  <body>
+    <h1>My Webpage</h1>
+    {{ include('navigation.html') }}
+    <p>{{ a_variable }}</p>
+    <p>{{ another_variable|upper }}</p>
+    <ul>
+      {% for item in people %}
+          <li>{{ item.FirstName }} {{ item.Surname }}</li>
+      {% endfor %}        
+    </ul>
+  </body>
+</html>
+
+
+<!-- 
+Notes on the code:
+-	You can increase code reuse by including templates within template, in this case: include('navigation.html'). We will create this file next. 
+-	“a_variable” displays a simple variable.
+-	“another_variable|upper” displays another variable, but converts it to uppercase. This is done using the "upper" extension.
+-	“for item in people” allows you to loop through an array of items. -->
